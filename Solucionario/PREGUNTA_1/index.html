@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>PREGUNTA 1</title>
+		<style type="text/css">
+			#background{position:absolute; width:99%; height:130%;}
+			#fixed {position:absolute; top: 0px; left: 0px;}
+		</style>
+	</head>
+	<body>
+		<div>
+			<img id="background" src="Imagenes/fondo.jpg"/> 
+		</div>
+		<div id="fixed">
+			</br></br></br>
+			<div style="padding-left:510px;">
+				<img src="Imagenes/selloespe.jpg" alt="ESPE" height="100" >
+			</div>
+			<div style="padding-left:395px;">
+				<h2>
+					<p style="text-align: center" style="color:#165014" ;>DEPARTAMENTO DE CIENCIAS DE LA COMPUTACIÓN</p>
+					<p style="text-align: center" style="color:#165014" ;>INGENIERÍA EN SISTEMAS E INFORMÁTICA</p>
+				</h2>
+				<h3>
+					<p style="text-align: center" style="color:#165014" ;>APLICACION DE TECNOLOGIAS WEB</p>
+				</h3>
+			</div>
+			<div style="padding-left:100px;">
+				<h4><p style="color:#1f1450";>Integrantes: Joel Castillo,  Danilo Jarrín </p></h4>
+				<h4><p style="color:#1f1450";>NRC: 8496</p></h4>
+				<h4><p style="color:#1f1450";>GRUPO Nro: 2</p></h4>
+				<a href="../../index.html"><img src="Imagenes/regresar.png" style="height: :30px; width: 30px;"></a>
+			</div>
+			
+			<div style="padding-left:250px;">
+				</br></br></br>
+				<h2><p style="text-align: center"> PREGUNTA 1</p></h2>
+			</div>
+			
+				
+				<div style="padding-left:250px;" >
+					<p id="demo" style="text-align: center;"></p>
+				</table>
+				</div>
+			</div>						
+		</div> 		
+		<script>
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+			    if (this.readyState == 4 && this.status == 200) {
+			        myFunction(this);
+			    }
+			};
+			xhttp.open("GET", "datos.xml", true);
+			xhttp.send();
+
+			function myFunction(xml) {
+			    var xmlDoc = xml.responseXML;
+			    document.getElementById("demo").innerHTML =
+			    xmlDoc.getElementsByTagName("nombre")[0].childNodes[0].nodeValue;
+			}
+		</script>
+
+	</body>
+</html>
